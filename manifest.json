@@ -1,0 +1,31 @@
+{
+  "name": "calculator",
+  "author": "humorHan",
+  "description" : "calculator Extension",
+  "version": "0.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "./html/index.html",
+    "default_icon": "./img/calculator-logo.png"
+  },
+  "permissions": ["storage", "https://*.google.com/", "activeTab"],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U",
+        "mac": "MacCtrl+Shift+U"
+      },
+      "description": "Opens calculator"
+    }
+  },
+  "background": {
+    "scripts": ["./js/background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://humorhan.top/*"],
+      "js": ["./js/contentScript.js"]
+    }
+  ]
+}

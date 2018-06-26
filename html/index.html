@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../css/style.css">
+  <title>计算器</title>
+</head>
+<body>
+  <div class="wrapper">
+    <input id="number1" placeholder="请输入被除数"/>
+    <input id="number2" value="640" placeholder="请输入除数"/>
+    <input id="result" class="disabled" readonly="true" />
+  </div>
+  <!-- 插件页面js -->
+  <script src="../js/lib/jquery.js"></script>
+  <script src="../js/index.js"></script>
+  <!-- end -->
+
+  <!-- 插件后台js
+    ps：不可获取非插件页面的信息，包括但不局限于dom，但是可以和contentScript通信，相当于页面和插件页面通信的桥梁 -->
+  <script src="../js/background.js"></script>
+  <!-- end -->
+
+  <!-- 特定网站下执行的js(manifest.json配置好之后自动引入) ps：可获取非插件页面的信息，包括但不局限于dom-->
+  <!-- <script src="../js/contentScript.js"></script> -->
+</body>
+
+</html>
