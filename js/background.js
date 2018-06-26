@@ -1,7 +1,7 @@
 /**
- * 插件运行后台js 
- * 该页面输出值可以在插件控制台查看
- * 访问dom是插件的dom
+ * extension运行后台js 
+ * 该页面输出值可以在extension控制台查看
+ * 访问dom是extension的dom
  */
 chrome.runtime.onInstalled.addListener(function () {
   chrome.storage.sync.set({
